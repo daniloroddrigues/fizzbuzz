@@ -9,12 +9,9 @@ FizzBuzz
 
 
 def fizz_buzz(param):
-    if param == 1 or param == 2:
+    if param == (1, 2):
         return param
-    if param == 1:
-        return 1
-    if param == 2:
-        return 2
+
     if param == 3:
         return 'fizz'
 
