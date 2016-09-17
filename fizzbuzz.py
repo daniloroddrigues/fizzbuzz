@@ -10,11 +10,14 @@ FizzBuzz
 
 
 def fizz_buzz(param):
-    if param % 3 == 0:
-        return 'fizz'
+    if param % 3 == 0 and param % 5 == 0:
+        param = 'fizzbuzz'
 
-    if param % 5 == 0:
-        return 'buzz'
+    elif param % 3 == 0:
+        param = 'fizz'
+
+    elif param % 5 == 0:
+        param = 'buzz'
 
     return param
 
@@ -22,8 +25,16 @@ def fizz_buzz(param):
 if __name__ == '__main__':
     assert fizz_buzz(1) == 1
     assert fizz_buzz(2) == 2
-    assert fizz_buzz(3) == 'fizz'
-
     assert fizz_buzz(4) == 4
-    assert fizz_buzz(5) == 'buzz'
+
+    assert fizz_buzz(3) == 'fizz'
     assert fizz_buzz(6) == 'fizz'
+    assert fizz_buzz(9) == 'fizz'
+
+    assert fizz_buzz(5) == 'buzz'
+    assert fizz_buzz(10) == 'buzz'
+    assert fizz_buzz(20) == 'buzz'
+
+    assert fizz_buzz(15) == 'fizzbuzz'
+    assert fizz_buzz(45) == 'fizzbuzz'
+    assert fizz_buzz(75) == 'fizzbuzz'
