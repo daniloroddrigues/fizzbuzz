@@ -9,11 +9,10 @@ FizzBuzz
 
 
 def fizz_buzz(param):
-    if param == (1, 2):
-        return param
-
     if param == 3:
         return 'fizz'
+
+    return param
 
 
 if __name__ == '__main__':
